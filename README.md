@@ -77,3 +77,8 @@ This is alpha-version code; use skeptically.
 ## Authors
 
 Shaheen Ghiassy <shaheen.ghiassy@gmail.com>
+
+SGListView的内存控制机制：
+如果是rn中的ListView我们需要定义renderow方法，如果不通过实验属性是删不掉节点的；
+而SGListView在ListView外层和内层做了封装；将row封装成cell，通过清空cell内部元素来减少内存开销；
+具体使用起来内存消耗情况未知，需探索一下。
